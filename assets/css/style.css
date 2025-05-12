@@ -1,0 +1,334 @@
+/* ===========
+RESET CSS
+============*/
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* common color */
+  --white: #fff;
+  --black: ##333;
+
+  /* theme color */
+  --color-primary: #fd7e14;
+  --color-secondary: #0ca678;
+  --color-bg-gray: #f8f9fa;
+  --color-border-gray: #ced4da;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* ==============
+COMMON CLASS
+=================*/
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.section_padding {
+  padding: 100px 0;
+}
+
+.section_title h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ============
+HEADER CSS
+===============*/
+.header_area {
+  padding: 30px 0;
+}
+.navbar {
+  display: grid;
+  grid-template-columns: 280px auto;
+  column-gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  display: inline-block;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 16px;
+}
+
+.menu a {
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: orange;
+}
+
+/* ============
+BANNER CSS
+===============*/
+
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid var(--color-border-gray);
+  padding: 3px;
+}
+
+/* ============
+ABOUT CSS
+===============*/
+.about_title {
+  text-align: center;
+}
+
+.about_title h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.about_title p {
+  max-width: 80%;
+  margin: 40px auto;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.single_about {
+  border: 1px solid var(--color-border-gray);
+  padding: 30px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.single_about i {
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  border: 1px solid var(--color-border-gray);
+  line-height: 50px;
+  border-radius: 50%;
+  color: #333;
+}
+
+.single_about h4 {
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 10px 0;
+}
+
+.single_about:hover {
+  border-color: orange;
+}
+
+/* ============
+SERVICE CSS
+===============*/
+.service_area {
+  background-color: var(--color-border-gray);
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.single_service {
+  background: var(--white);
+  padding: 25px;
+}
+
+.single_service h4 {
+  font-size: 30px;
+  text-transform: capitalize;
+  background: var(--color-secondary);
+  padding: 20px 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.single_service img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.single_service p {
+  margin: 20px 0;
+}
+
+.single_service a {
+  display: inline-block;
+  background: var(--color-primary);
+  padding: 10px 20px;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.single_service a:hover {
+  background-color: var(--color-secondary);
+}
+/* ============
+GALLERY CSS
+===============*/
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.single_gallery {
+  border: 1px solid var(--color-border-gray);
+  padding: 3px;
+}
+/* ============
+CONTACT CSS
+===============*/
+
+.contact_area {
+  background-color: lightgray;
+}
+
+.contact_wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding-top: 20px;
+}
+
+.contact_form input,
+.contact_form textarea {
+  width: 100%;
+  outline: none;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-border-gray);
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.contact_form input:focus,
+.contact_form textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.contact_form textarea {
+  font-family: inherit;
+  height: 150px;
+}
+
+.contact_form input[type='submit'] {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--color-primary);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact_form input[type='submit']:hover {
+  background: var(--color-secondary);
+}
+
+.contact_address li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact_address i {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  background: var(--color-primary);
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--white);
+}
+
+.contact_address h4 {
+  font-size: 28px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.contact_address h4 span {
+  font-size: 18px;
+  display: block;
+  font-weight: 400;
+  color: var(--black);
+}
+/* ============
+FOOTER CSS
+===============*/
+
+.footer_area {
+  background: var(--color-secondary);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer_area p {
+  color: var(--white);
+  font-size: 18px;
+}
