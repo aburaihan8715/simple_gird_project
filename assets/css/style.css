@@ -67,6 +67,9 @@ COMMON CLASS
   text-align: center;
   margin-bottom: 40px;
 }
+.hidden {
+  display: none;
+}
 
 /* ============
 HEADER CSS
